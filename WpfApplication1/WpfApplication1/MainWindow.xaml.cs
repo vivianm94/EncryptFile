@@ -40,7 +40,7 @@ namespace WpfApplication1
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            var status=Class1.Instance.EncryptFile(new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text.Trim());
+            var status= EncryptDecrypt.Instance.EncryptFile(new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text.Trim());
 
             if (status)
             {
@@ -54,7 +54,7 @@ namespace WpfApplication1
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            var status = Class1.Instance.DecryptFile(new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text.Trim());
+            var status = EncryptDecrypt.Instance.DecryptFile(new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd).Text.Trim());
 
             if (status)
             {
